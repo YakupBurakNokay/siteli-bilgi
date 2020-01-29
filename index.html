@@ -1,5 +1,6 @@
 <html>
-    
+                        <!-- codare tarafından paylaşılmıştır -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta charset="utf-8"/>
@@ -14,6 +15,7 @@
 	<link href="assets/css/bundle.css" rel="stylesheet"></head>
 	<link href="assets/css/style.css" rel="stylesheet"></head>
 </head>
+                        <!-- codare tarafından paylaşılmıştır -->
 
 
 <body bgcolor="#2C2F33">
@@ -77,12 +79,14 @@
                                     <div>Kuruluş <font color="#FFFFFF">${createdAt}</font></div>
                                     <div>toplam sunucu sayısı <font color="#FFFFFF">${client.guilds.size}</font> toplam kullanıcı sayısı<font color="#FFFFFF"> ${client.users.size}</font> </div>
                                     <div>Bot Yapımcısı <font color="#FFFFFF">${owner}</font></div>
-                                    <div>Bu bot <font color="#FFFFFF">${app.botPublic ? `herkese açık</font>, Davet Linki<a style="color: #7289DA;" href=" ${inviteURL}" target="_blank">Tıkla</a>` : `Gizli</font>`}</div>
-                                    <div>Mevcut bot durumu:<font color="#FFFFFF">${client.user.presence.status}</font><div>
+                                    <div>Bu bot <font color="#FFFFFF">${app.botPublic ? `herkese açık</font>, Davet Linki<a style="color: #7289DA;" href=" ${inviteURL}" target="_blank"> Tıkla</a>` : `Gizli</font>`}</div>
+                                    <div>Mevcut bot durumu:<font color="#FFFFFF"> ${client.user.presence.status.replace("dnd", `Rahatsız Etmeyin`).replace("online", `Çevrimiçi`) .replace("idle", `Boşta`).replace("offline", `Çevrimdışı`)} </font><div>
+
                                     <div>Mevcut bot oynuyor kısmı <font color="#FFFFFF">${client.user.presence.game ? client.user.presence.game.name : "Oynuyor bölümü boş"}</font>
                                 </font>
                             </li>
                         </ul>`;
+                  
                     document.getElementById("loading").style.display = "none";
                     $("#result").append(result);
                     client.destroy();
@@ -131,5 +135,6 @@ Tasarım <a style="color: #ff5858; text-decoration: none;" target="_blank" href=
 
   | Discord, Inc. Bağlı Değildir! </footer>
 </body>
+                        <!-- codare tarafından paylaşılmıştır -->
 
 </html>
